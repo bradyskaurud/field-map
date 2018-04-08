@@ -12,7 +12,7 @@ var users = require('./routes/users');
 var app = express();
 
 // Database connection
-mongoose.connect(`mongodb://skaurud:element23@ds237989.mlab.com:37989/heroku_z7r22j2d`);
+//mongoose.connect(`mongodb://skaurud:element23@ds237989.mlab.com:37989/heroku_z7r22j2d`);
 
 //${process.env.DB_USER}:${process.env.DB_PASSWORD}@${process.env.DB_URL}
 
