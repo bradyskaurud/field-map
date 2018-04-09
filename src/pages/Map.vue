@@ -1,10 +1,6 @@
 <template>
   <div>
     <div id="mapid"></div>
-    <!-- <div v-for="field in fields" :key="field" style="height:30px; color:black">
-      <p>{{field}}</p>
-       <a v-bind:href="field" style="height:10px;"/>
-    </div> -->
   </div>
 </template>
 
@@ -15,13 +11,11 @@ export default {
     name: 'map',
     data () {
         return {
-          msg: 'Welcome to Your Maps',
           fields: [],
         }
     },
     created: function () {
-      // `this` points to the vm instance
-      axios.get(`http://24e46f03.ngrok.io/fields`)
+      axios.get(`${process.env.API_URL}/api/fields`)
       .then((response)  =>  {
         var map = L.map('mapid').setView([47.379851, -96.262011], 10);
 
@@ -53,7 +47,7 @@ export default {
   }
 
   #mapid { 
-    height: 100vw;
+    height: 178vw;
     width: 100vw; 
   }
 </style>
